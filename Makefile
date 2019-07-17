@@ -1,11 +1,12 @@
-
 NC = nasm
 NASMFLAGS = -f macho64
-NAME = libfts.a
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g -Weverything
 
-FILES = test.s
+NAME = libfts.a
+
+FILES = ft_bzero.s
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/,$(FILES))
@@ -28,6 +29,9 @@ $(OBJS_DIR):
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.s
 	$(NC) $(NASMFLAGS) $< -o $@
+
+test:
+	$(CC) $(CFLAGS) $(NAME) ./main.c -I ./includes
 
 clean:
 	/bin/rm -rf $(OBJS_DIR)
