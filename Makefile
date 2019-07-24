@@ -2,11 +2,18 @@ NC = nasm
 NASMFLAGS = -f macho64
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g -Weverything
+CFLAGS = #-Wall -Wextra -Werror -g -Weverything
 
 NAME = libfts.a
 
-FILES = ft_bzero.s
+FILES = ft_bzero.s ft_isascii.s \
+	ft_isalnum.s ft_isalpha.s \
+	ft_isdigit.s ft_isprint.s \
+	ft_toupper.s ft_tolower.s \
+	ft_strcat.s ft_puts.s \
+	ft_strlen.s ft_memset.s \
+	ft_memcpy.s ft_strdup.s \
+	ft_cat.s
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/,$(FILES))
