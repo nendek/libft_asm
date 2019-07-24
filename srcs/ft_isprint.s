@@ -3,9 +3,9 @@ global _ft_isprint
 section .text
 
 _ft_isprint:
-	cmp rdi, 31
+	cmp rdi, 32
 	jl fail
-	cmp rdi, 127
+	cmp rdi, 126
 	jg fail
 
 success:

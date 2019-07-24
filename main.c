@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 #include "libfts.h"
 
@@ -32,12 +33,26 @@ int main(void) {
 	//printf("%s | %s\n", str1, str);
 	//ft_memcpy(str1, str, 1);
 	//printf("%s\n", str1);
-	
-	char *test;
 
-	test = ft_strdup(str);
-	printf("%s | %s\n", str, test);
+	//char *test;
 
+	//test = ft_strdup(str);
+	//printf("%s | %s\n", str, test);
+	//
+	int i = -9;
+	int k = 0;
+	int l = 0;
+
+	while (i < 255) {
+		k = ft_isprint(i);
+		l = isprint(i);
+		if (k != l) {
+			printf("i = %d\n", i);
+			printf("ft = %d\n", ft_isprint(i));
+			printf("real =%d\n", isprint(i));
+		}
+		i++;
+	}
 
 	return(1);
 }
