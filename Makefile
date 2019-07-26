@@ -13,7 +13,8 @@ FILES = ft_bzero.s ft_isascii.s \
 	ft_strcat.s ft_puts.s \
 	ft_strlen.s ft_memset.s \
 	ft_memcpy.s ft_strdup.s \
-	ft_cat.s
+	ft_cat.s ft_putchar.s \
+	ft_putchar_fd.s
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/,$(FILES))

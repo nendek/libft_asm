@@ -39,20 +39,25 @@ int main(void) {
 	//test = ft_strdup(str);
 	//printf("%s | %s\n", str, test);
 	//
-	int i = -9;
-	int k = 0;
-	int l = 0;
+//	int i = -9;
+//	int k = 0;
+//	int l = 0;
+//
+//	while (i < 255) {
+//		k = ft_isprint(i);
+//		l = isprint(i);
+//		if (k != l) {
+//			printf("i = %d\n", i);
+//			printf("ft = %d\n", ft_isprint(i));
+//			printf("real =%d\n", isprint(i));
+//		}
+//		i++;
+//	}
+//
+	
+	ft_putchar_fd('2', 2);
 
-	while (i < 255) {
-		k = ft_isprint(i);
-		l = isprint(i);
-		if (k != l) {
-			printf("i = %d\n", i);
-			printf("ft = %d\n", ft_isprint(i));
-			printf("real =%d\n", isprint(i));
-		}
-		i++;
-	}
+
 
 	return(1);
 }
