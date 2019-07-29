@@ -8,11 +8,11 @@
 int main(void) {
 	char str[] = "a";
 	char *test;
-	char *real;
+	//char *real;
 	
-	int len = 2;
-	test = malloc(len);
-	real = malloc(len);
+	//int len = 2;
+	//test = malloc(len);
+	//real = malloc(len);
 
 	//char str1[] = "ok";
 	//char str2[] = "pd";
@@ -37,19 +37,20 @@ int main(void) {
 	//
 	//memset(str1, 'x', 4);
 	//ft_memset(str1, 'x', 4);
-	printf("me\n");
-	printf("%s\n", ft_memcpy(test, str, len));
-
-
-	printf("real\n");
-	printf("%s\n", memcpy(real, str, len));
+//	printf("me\n");
+//	printf("%s\n", ft_memcpy(test, str, len));
+//
+//
+//	printf("real\n");
+//	printf("%s\n", memcpy(real, str, len));
 
 //	char *test;
-//
-//	test = ft_memalloc(4);
-// 	
-//	test[0] = 'c';
-//	printf("%s", test);
+//	
+	if(!(test = ft_memalloc(1)))
+		dprintf(1, "OKOK");
+	test[0] = 'c';
+	printf("%s", test);
+	ft_memdel((void**)&test);
 	//test = ft_strdup(str);
 	//printf("%s | %s\n", str, test);
 	//
