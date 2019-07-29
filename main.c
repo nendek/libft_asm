@@ -34,8 +34,12 @@ int main(void) {
 	//ft_memcpy(str1, str, 1);
 	//printf("%s\n", str1);
 
-	//char *test;
+	char *test;
 
+	test = ft_memalloc(4);
+ 	
+	test[0] = 'c';
+	printf("%s", test);
 	//test = ft_strdup(str);
 	//printf("%s | %s\n", str, test);
 	//
@@ -55,7 +59,7 @@ int main(void) {
 //	}
 //
 	
-	ft_putchar_fd('2', 2);
+//	ft_putchar_fd('2', 2);
 
 
 

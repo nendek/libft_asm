@@ -20,6 +20,8 @@ void	ft_cat(int fd);
 //bonus
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
+void	*ft_memalloc(size_t size);
+
 
 
 #endif
