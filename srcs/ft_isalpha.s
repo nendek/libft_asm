@@ -1,16 +1,17 @@
 global _ft_isalpha
 
+extern _ft_islower
+extern _ft_isupper
+
 section .text
 
 _ft_isalpha:
-	cmp rdi, 65
-	jl fail
-	cmp rdi, 90
-	jle success
-	cmp rdi, 97
-	jl fail
-	cmp rdi, 122
-	jg fail
+	call _ft_islower
+	cmp rax, 1
+	je success
+	call _ft_isupper
+	cmp rax, 0
+	je fail
 
 success:
 	mov rax, 1

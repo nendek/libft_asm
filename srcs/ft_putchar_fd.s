@@ -7,7 +7,7 @@ _ft_putchar_fd:
 	mov rbp, rsp
 	push rdi
 	mov rdi, rsi
-	lea rsi, [rel rsp]
+	lea rsi, [rsp]
 	mov rdx, 1
 	mov rax, 0x2000004
 	syscall

@@ -1,12 +1,13 @@
 global _ft_tolower
 
+extern _ft_isupper
+
 section .text
 
 _ft_tolower:
-	cmp rdi, 65
-	jl return
-	cmp rdi, 90
-	jg return
+	call _ft_isupper
+	cmp rax, 0
+	je return
 	add rdi, 32
 
 return:

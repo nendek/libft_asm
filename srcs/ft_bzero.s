@@ -3,8 +3,8 @@ global _ft_bzero
 section .text
 
 _ft_bzero:
-	cmp rsi, 0
-	je end
+	test rsi, rsi
+	jz end
 	mov [rdi], byte 0
 	dec rsi
 	inc rdi

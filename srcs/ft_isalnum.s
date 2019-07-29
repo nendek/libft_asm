@@ -1,20 +1,17 @@
 global _ft_isalnum
 
+extern _ft_isalpha
+extern _ft_isdigit
+
 section .text
 
 _ft_isalnum:
-	cmp rdi, 48
-	jl fail
-	cmp rdi, 57
-	jle success
-	cmp rdi, 65
-	jl fail
-	cmp rdi, 90
-	jle success
-	cmp rdi, 97
-	jl fail
-	cmp rdi, 122
-	jg fail
+	call _ft_isalpha
+	cmp rax, 1
+	je success
+	call _ft_isdigit
+	cmp rax, 0
+	je fail
 
 success:
 	mov rax, 1

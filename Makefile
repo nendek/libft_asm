@@ -6,7 +6,8 @@ CFLAGS = #-Wall -Wextra -Werror -g -Weverything
 
 NAME = libfts.a
 
-FILES = ft_bzero.s ft_isascii.s \
+FILES = ft_bzero.s ft_islower.s \
+	ft_isupper.s ft_isascii.s \
 	ft_isalnum.s ft_isalpha.s \
 	ft_isdigit.s ft_isprint.s \
 	ft_toupper.s ft_tolower.s \
@@ -14,7 +15,7 @@ FILES = ft_bzero.s ft_isascii.s \
 	ft_strlen.s ft_memset.s \
 	ft_memcpy.s ft_strdup.s \
 	ft_cat.s ft_putchar.s \
-	ft_putchar_fd.s ft_memalloc.s
+	ft_putchar_fd.s ft_memalloc.s \
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/,$(FILES))

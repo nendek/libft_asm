@@ -4,7 +4,6 @@ section .text
 
 _ft_strcat:
 	push rdi
-	jmp go_end
 
 go_end:
 	cmp [rdi], byte 0

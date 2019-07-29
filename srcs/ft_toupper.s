@@ -1,12 +1,13 @@
 global _ft_toupper
 
+extern _ft_islower
+
 section .text
 
 _ft_toupper:
-	cmp rdi, 97
-	jl return
-	cmp rdi, 122
-	jg return
+	call _ft_islower
+	cmp rax, 0
+	je return
 	sub rdi, 32
 
 return:

@@ -3,10 +3,10 @@ global _ft_strlen
 section .text
 
 _ft_strlen:
-	xor rcx, rcx
 	test rdi, rdi
 	jz end
-	mov rcx, -1
+	xor rcx, rcx
+	not rcx
 	mov al, 0x0
 	cld
 	repne scasb

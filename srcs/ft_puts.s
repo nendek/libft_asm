@@ -7,7 +7,6 @@ _ft_puts:
 	je puts_null
 	mov rsi, rdi
 	mov rdx, 0
-	jmp compute_len
 
 compute_len:
 	cmp [rdi], byte 0
@@ -31,11 +30,12 @@ puts:
 	syscall
 
 end:
+	mov eax, 10
 	ret
 
 section .data
 newline:
-	.string db 0x0a
+	.string db 0xa
 	.len equ $ - newline.string
 
 null:
