@@ -1,14 +1,21 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 #include "libfts.h"
 
 int main(void) {
-	char str[] = "COUCOU";
+	char str[] = "a";
+	char *test;
+	char *real;
+	
+	int len = 2;
+	test = malloc(len);
+	real = malloc(len);
 
-	char str1[] = "ok";
-	char str2[] = "pd";
+	//char str1[] = "ok";
+	//char str2[] = "pd";
 
 	//printf("%s\n", str);
 	//ft_bzero(str, 6);
@@ -30,16 +37,19 @@ int main(void) {
 	//
 	//memset(str1, 'x', 4);
 	//ft_memset(str1, 'x', 4);
-	//printf("%s | %s\n", str1, str);
-	//ft_memcpy(str1, str, 1);
-	//printf("%s\n", str1);
+	printf("me\n");
+	printf("%s\n", ft_memcpy(test, str, len));
 
-	char *test;
 
-	test = ft_memalloc(4);
- 	
-	test[0] = 'c';
-	printf("%s", test);
+	printf("real\n");
+	printf("%s\n", memcpy(real, str, len));
+
+//	char *test;
+//
+//	test = ft_memalloc(4);
+// 	
+//	test[0] = 'c';
+//	printf("%s", test);
 	//test = ft_strdup(str);
 	//printf("%s | %s\n", str, test);
 	//
