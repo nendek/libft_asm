@@ -24,5 +24,7 @@ void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strchr(const char *s, int c);
 
 #endif

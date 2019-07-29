@@ -6,8 +6,9 @@
 #include "libfts.h"
 
 int main(void) {
-	char str[] = "a";
-	char *test;
+//	char str[] = "abcdefg";
+
+//	printf("%s\n", ft_strchr(str, 'c'));
 	//char *real;
 	
 	//int len = 2;
@@ -44,13 +45,26 @@ int main(void) {
 //	printf("real\n");
 //	printf("%s\n", memcpy(real, str, len));
 
-//	char *test;
-//	
-	if(!(test = ft_memalloc(1)))
-		dprintf(1, "OKOK");
-	test[0] = 'c';
-	printf("%s", test);
-	ft_memdel((void**)&test);
+	//char *test;
+	//char *test2;
+	char test[] = "2e message, Alexandre Benalla dit l’avoir adressé via Telegram à Emmanuel Macron dans la nuit du 1er au 2 mai 2018, soit quelques heures après l’épisode de la Contrescarpe. Le jeune chargé de mission l’a ensuite transféré, peu après 9 heures du matin, à Alexis Kohler. Discrètement entendu par l’Inspection générale de la police (IGPN), les 17 et 18 avril 2019 (Patrick Strzoda l’a été en mars), le secrétaire général de l’Elysée a montré aux enquêteurs le numéro de téléphone expéditeur du message. Il s’agit du « 06 » de M. Benalla, mais pas n’importe lequel : celui correspondant à son fameux portable « personnel » – un appareil resté à ce jour introuvable.";
+
+	char test2[] = "Ce message, Alexandre Benalla dit l’avoir adressé via Telegram à Emmanuel Macron dans la nuit du 1er au 2 mai 2018, soit quelques heures après l’épisode de la Contrescarpe. Le jeune chargé de mission l’a ensuite transféré, peu après 9 heures du matin, à Alexis Kohler. Discrètement entendu par l’Inspection générale de la police (IGPN), les 17 et 18 avril 2019 (Patrick Strzoda l’a été en mars), le secrétaire général de l’Elysée a montré aux enquêteurs le numéro de téléphone expéditeur du message. Il s’agit du « 06 » de M. Benalla, mais pas n’importe lequel : celui correspondant à son fameux portable « personnel » – un appareil resté à ce jour introuvable.";
+	//if(!(test = ft_memalloc(10)))
+	//	dprintf(1, "OKOK");
+	//if(!(test2 = ft_memalloc(10)))
+	//	dprintf(1, "OKOK");
+	//test[0] = 'c';
+	//test[1] = 'o';
+	//test[2] = 'p';
+	//test2[0] = '3';
+	//test2[1] = 'o';
+	//test2[2] = 'p';
+	printf("%d\n", ft_memcmp(test, test2, ft_strlen(test)));
+	printf("%d\n", memcmp(test, test2, ft_strlen(test)));
+	printf("%d\n", ft_memcmp(test, test2, 0));
+	printf("%d\n", memcmp(test, test2, 0));
+	//ft_memdel((void**)&test);
 	//test = ft_strdup(str);
 	//printf("%s | %s\n", str, test);
 	//

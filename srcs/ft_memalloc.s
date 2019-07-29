@@ -9,12 +9,11 @@ _ft_memalloc:
 	push rbp
 	mov rbp, rsp
 	sub rsp, 0x10
-	cmp rdi, rdi
+	test rdi, rdi
 	je end
 
 alloc:
 	mov [rbp - 0x10], rdi
-	mov r8, rdi
 	call _malloc
 	test rax, rax
 	je end
@@ -22,7 +21,7 @@ alloc:
 
 init:
 	mov rdi, rax
-	mov rsi, r8
+	mov rsi, [rbp - 0x10]
 	call _ft_bzero
 	pop rax
 
