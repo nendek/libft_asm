@@ -9,8 +9,8 @@ _ft_strchr:
 search:
 	cmp byte [rdi], sil
 	je found
-	test byte [rdi], 0
-	jne not_found
+	cmp byte [rdi], 0
+	je not_found
 	inc rdi
 	jmp search
 

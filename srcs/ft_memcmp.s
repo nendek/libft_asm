@@ -3,33 +3,36 @@ global _ft_memcmp
 section .text
 
 _ft_memcmp:
-	mov rax, -1
-	test rdi, rdi
-	je error
-	test rsi, rsi
-	je error
-	mov r8, rdi
-	mov r9, rsi
+	mov rcx, rdx
+	cld
+	repe cmpsb
+	dec rsi
+	dec rdi
 	xor rax, rax
-	test rdx, rdx
-	je error
 	xor rbx, rbx
-	xor rcx, rcx
-
-memcmp:
-	mov al, byte[rdi + rcx]
-	mov bl, byte[rsi + rcx]
-	cmp rcx, rdx
-	jge end
-	add rcx, 1
-	cmp al, bl
-	je memcmp
-
-end:
+	mov al, [rdi]
+	mov bl, [rsi]
+	cmp eax, 127
+	jg overflow
+	cmp ebx, 127
+	jg overflow
 	sub rax, rbx
-	mov rdi, r8
-	mov rsi, r9
 	ret
 
-error:
+overflow:
+	cmp al, bl
+	jg ret_pos
+	jl ret_neg
+	jmp ret_same
+
+ret_pos:
+	mov rax, 1
+	ret
+
+ret_neg:
+	mov rax, -1
+	ret
+
+ret_same:
+	mov rax, 0
 	ret
