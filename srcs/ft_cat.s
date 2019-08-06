@@ -32,5 +32,5 @@ end:
 section .data
 
 buffer:
-	.string db 255
+	.string resb 255
 	.len equ $ - buffer.string

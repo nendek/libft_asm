@@ -20,6 +20,8 @@ alloc:
 	push r8
 	push rdi
 	call _malloc
+	test rax, rax
+	je end
 
 dup:
 	pop rcx

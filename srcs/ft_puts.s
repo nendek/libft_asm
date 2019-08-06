@@ -3,7 +3,7 @@ global _ft_puts
 section .text
 
 _ft_puts:
-	cmp rdi, 0
+	test rdi, rdi
 	je puts_null
 	mov rsi, rdi
 	mov rdx, 0
